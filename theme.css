@@ -1,0 +1,53 @@
+/* Light Mode - Pearl & Grey */
+.app.light {
+  --bg: linear-gradient(
+    135deg,
+    #f8f9fa,
+    #e0e0e0
+  ); /* Soft pearl to light grey */
+  --text: #1a1a1a;
+  --card-bg: rgba(255, 255, 255, 0.6);
+}
+
+/* Dark Mode - Cool Greys and Black */
+.app.dark {
+  --bg: linear-gradient(135deg, #1f1f1f, #3a3a3a); /* Deep grey to charcoal */
+  --text: #f0f0f0;
+  --card-bg: rgba(30, 30, 30, 0.6);
+}
+
+/* Common App Styles */
+.app {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease-in-out;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Buttons */
+.btn {
+  background-color: transparent;
+  border: 2px solid var(--text);
+  color: var(--text);
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  background-color: var(--text);
+  color: var(--bg);
+  transform: translateY(-3px);
+}
+
+/* Optional: Card Glass Effect */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
